@@ -27,7 +27,7 @@ namespace Outscal.ChestRoyalSystem
         public bool isLocked;
         [HideInInspector]
         private bool isChestCanBeUnlocked;
-
+        private  string message;
         private Sprite emptySprite;
         // private Timer timer;
 
@@ -119,7 +119,6 @@ namespace Outscal.ChestRoyalSystem
         // Show chest status
         public void ChestClicked()
         {
-            string message;
             if (isEmpty)
             {
                 message = "Chest Slot is Empty";
