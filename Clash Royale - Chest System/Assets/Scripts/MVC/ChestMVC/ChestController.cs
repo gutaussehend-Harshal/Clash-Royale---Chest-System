@@ -1,6 +1,9 @@
 ﻿using System;
 using UnityEngine;
 
+/// <summary>
+/// This class contains chests logic.
+/// </summary>
 namespace Outscal.ChestRoyalSystem
 {
     [Serializable]
