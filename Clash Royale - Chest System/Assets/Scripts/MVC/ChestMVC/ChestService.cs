@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// This class contains chest logic part.
+/// This class creates chests.
 /// </summary>
 namespace Outscal.ChestRoyalSystem
 {
