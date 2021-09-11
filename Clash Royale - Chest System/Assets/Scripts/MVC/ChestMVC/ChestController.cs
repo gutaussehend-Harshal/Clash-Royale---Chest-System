@@ -87,14 +87,14 @@ namespace Outscal.ChestRoyalSystem
         // Unlock chest using gems
         public void UnlockChestUsingGems()
         {
-            isChestCanBeUnlocked = Player.GetInstance().RemoveFromPlayer(unlockGems);
+            isChestCanBeUnlocked = Player.Instance.RemoveFromPlayer(unlockGems);
             if (isChestCanBeUnlocked)
             {
                 ChestUnlocked();
             }
             else
             {
-                ChestService.GetInstance().DisplayMessageOnPopUp("Unsufficient Gems. Cannot Unlock Chest");
+                ChestService.Instance.DisplayMessageOnPopUp("Unsufficient Gems. Cannot Unlock Chest");
             }
         }
 
@@ -108,7 +108,7 @@ namespace Outscal.ChestRoyalSystem
             // timeToUnlock = 0;
             unlockGems = 0;
             ChestView.DisplayChestData();
-            ChestService.GetInstance().UnlockNextChest(ChestView);
+            ChestService.Instance.UnlockNextChest(ChestView);
         }
 
         public bool IsEmpty()
@@ -122,20 +122,20 @@ namespace Outscal.ChestRoyalSystem
             if (isEmpty)
             {
                 message = "Chest Slot is Empty";
-                ChestService.GetInstance().DisplayMessageOnPopUp(message);
+                ChestService.Instance.DisplayMessageOnPopUp(message);
                 return;
             }
             if (!isLocked)
             {
-                Player.GetInstance().AddToPlayer(coins, gems);
+                Player.Instance.AddToPlayer(coins, gems);
                 message = "Added " + coins + " coins and " + gems + " gems";
-                ChestService.GetInstance().DisplayMessageOnPopUp(message);
+                ChestService.Instance.DisplayMessageOnPopUp(message);
                 MakeChestEmpty();
             }
             else
             {
                 message = "Chest is Locked.";
-                ChestService.GetInstance().DisplayPopUp(this, isAddedToQueue, message, unlockGems);
+                ChestService.Instance.DisplayPopUp(this, isAddedToQueue, message, unlockGems);
             }
         }
 

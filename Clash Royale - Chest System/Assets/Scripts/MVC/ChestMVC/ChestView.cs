@@ -25,7 +25,7 @@ namespace Outscal.ChestRoyalSystem
 
         void Start()
         {
-            transform.SetParent(ChestService.GetInstance().chestSlotGroup.transform);
+            transform.SetParent(ChestService.Instance.chestSlotGroup.transform);
             chestController.MakeChestEmpty();
         }
 

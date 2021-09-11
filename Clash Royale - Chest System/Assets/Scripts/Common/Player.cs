@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+/// <summary>
+/// This class handles player name, no of gems and coins.
+/// </summary>
 namespace Outscal.ChestRoyalSystem
 {
     public class Player : MonoSingleton<Player>

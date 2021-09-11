@@ -3,6 +3,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+/// <summary>
+/// This class contains UI part.
+/// </summary>
 namespace Outscal.ChestRoyalSystem
 {
     public class PopUpManager : MonoSingleton<PopUpManager>
@@ -58,7 +61,7 @@ namespace Outscal.ChestRoyalSystem
             // }
             // else
             // {
-                ChestService.GetInstance().AddChestToUnlockingQueue();
+                ChestService.Instance.AddChestToUnlockingQueue();
             // }
         }
 
@@ -66,7 +69,7 @@ namespace Outscal.ChestRoyalSystem
         public void OnUnlockChestBtnClicked()
         {
             popUpScreen.SetActive(false);
-            ChestService.GetInstance().UnlockChestUsingGemsSelected();
+            ChestService.Instance.UnlockChestUsingGemsSelected();
         }
 
         // Display pannel

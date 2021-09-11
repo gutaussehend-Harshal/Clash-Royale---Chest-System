@@ -123,14 +123,14 @@ namespace Outscal.ChestRoyalSystem
         // Display pannel
         public void DisplayMessageOnPopUp(string message)
         {
-            PopUpManager.GetInstance().OnlyDisplay(message);
+            PopUpManager.Instance.OnlyDisplay(message);
         }
 
         // Display pannel
         public void DisplayPopUp(ChestController callingChestController, bool chestAddedToQueue, string message, int gemsToUnlock)
         {
             popUpChest = callingChestController.ChestView;
-            PopUpManager.GetInstance().DisplayPopUp(chestAddedToQueue, message, gemsToUnlock);
+            PopUpManager.Instance.DisplayPopUp(chestAddedToQueue, message, gemsToUnlock);
         }
     }
 }
