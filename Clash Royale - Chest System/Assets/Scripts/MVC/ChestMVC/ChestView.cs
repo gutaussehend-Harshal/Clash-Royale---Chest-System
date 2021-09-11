@@ -3,6 +3,9 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
+/// <summary>
+/// This class contains all methods which inherited from monobehaviour class.
+/// </summary>
 namespace Outscal.ChestRoyalSystem
 {
     public class ChestView : MonoBehaviour
