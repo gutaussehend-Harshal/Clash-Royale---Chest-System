@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This class contains chest logic part.
+/// </summary>
 namespace Outscal.ChestRoyalSystem
 {
     public class ChestService : MonoSingleton<ChestService>
@@ -20,6 +23,7 @@ namespace Outscal.ChestRoyalSystem
         private ChestModel chestModel;
         private ChestController chestController;
         private int chestSlotAlreadyOccupied = 0;
+
         void Start()
         {
             chestSlots = new ChestController[noOfChestSlots];
